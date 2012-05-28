@@ -14,7 +14,6 @@
             if(formBody) {
                 var formHeight = formBody.getHeight();
                 var tt = $$('.tl_formbody_submit')[0].getPosition().y +49;
-                //console.log(document.id("footer").getHeight());
                 var pos = formBody.getPosition().y + formBody.getHeight();
                 this.difference = tt - window.getHeight();
                 this.formPos = formBody.getPosition().y;
@@ -30,9 +29,7 @@
          * @desc initialize the stickyFooter for Backend
          */
         setItem: function(formBody) {
-            //console.log(document.id("footer").getPosition().y);
             var raffle = $$('.tl_formbody_submit')[0].getPosition().y +49;
-            console.log(raffle);
             var diff = raffle - window.getHeight();
 
             var $this = window,
