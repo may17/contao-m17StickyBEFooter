@@ -1,7 +1,7 @@
-.stickySave .tl_formbody_submit {
+.stickySave .tl_submit_container {
     position: fixed;
     bottom: 0;
-    width: 726px;
+    width: 690px;
 }
 .stickySave #main {
     padding-bottom: 30px;

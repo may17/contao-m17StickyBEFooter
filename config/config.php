@@ -30,6 +30,6 @@
 // Add Stickyfooter files
 if(TL_MODE == 'BE')
 {
-    $GLOBALS['TL_CSS'][] = 'system/modules/m17StickyBEFooter/html/m17StickyBEFooter.css';
-    $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/m17StickyBEFooter/html/m17StickyBEFooter.js';
+    $GLOBALS['TL_CSS'][] = 'system/modules/m17StickyBEFooter/html/m17StickyBeFooter_uncompressed.css';
+    $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/m17StickyBEFooter/html/m17StickyBeFooter_uncompressed.js';
 }
