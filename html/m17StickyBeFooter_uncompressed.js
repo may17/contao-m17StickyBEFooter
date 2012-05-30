@@ -20,9 +20,14 @@
 
                 //load the methoad with init
                 this.setItem(formBody);
-                window.addEvent('scroll', function(){
-                    this.setItem(formBody);
-                }.bind(this));
+                window.addEvents({
+                    'scroll': function(){
+                        this.setItem(formBody);
+                    }.bind(this),
+                    'resize': function(){
+                        this.setItem(formBody);
+                    }.bind(this)
+                });
             }
         },
         /* initStickyFooter
