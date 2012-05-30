@@ -8,7 +8,8 @@
         init: function() {
             var formBody = $$('.tl_formbody_submit')[0] || false,
                 pos,
-                difference;
+                difference,
+                self = this;
 
             //invoke only when the element existists
             if(formBody) {
@@ -27,6 +28,12 @@
                     'resize': function(){
                         this.setItem(formBody);
                     }.bind(this)
+                });
+                
+                
+                //addEvent Delegation
+                $$('fieldset').addEvent('click:relay(legend)', function(e){
+                    self.setItem(formBody);
                 });
             }
         },
