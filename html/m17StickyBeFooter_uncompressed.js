@@ -60,5 +60,6 @@
     }
     window.addEvent('domready', function() {
         Backend.stickyFooter.init();
+        this.scrollTo(0, 1);
     });
 })();
