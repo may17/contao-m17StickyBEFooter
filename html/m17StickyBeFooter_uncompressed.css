@@ -1,13 +1,1 @@
-.stickySave .tl_submit_container {
-    position: fixed;
-    bottom: 0;
-    width: 690px;
-    z-index: 99;
-}
-.stickySave #main {
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-}
-.stickySave #tl_helpBox {
-    margin-left: 30px;
-}
+.stickySave .tl_submit_container{position:fixed;bottom:0;width:690px;z-index:99}.stickySave #main{padding-bottom:30px;margin-bottom:30px}.stickySave #tl_helpBox{margin-left:30px}
