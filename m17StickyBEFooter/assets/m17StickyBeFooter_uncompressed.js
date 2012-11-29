@@ -25,34 +25,39 @@
 
                 //load the methoad with init
                 this.setItem(formBody);
-                
+
                	//Prepare event
                	setEvent = this.setItem.bind(this).pass(formBody);
-               	
+
                	//Add resize and scroll events
                 window.addEvents({
                     'scroll': setEvent,
                     'resize': setEvent,
                     'ajax_change': setEvent
                 });
-                
+
                 //addEvent Delegation for legends
                 fieldsetEl = $$('fieldset');
                 fieldsetEl.addEvent('click:relay(legend)', function(e){
                     self.setItem(formBody);
                 });
-                
+
                 //Improvment for checkbox actions
                 fieldsetEl.addEvent('click:relay(input.tl_checkbox[onclick])', function(e){
                     self.setItem(formBody);
                 });
+
+                //set toggle action
+                this.setToggler(formBody);
             }
         },
         /* initStickyFooter
          * @desc initialize the stickyFooter for Backend
          */
         setItem: function(formBody) {
-            var raffle = formBody.getPosition().y +49,
+
+            var offset = this.generateOffset(formBody);
+            var raffle = formBody.getPosition().y +49 + offset,
             	diff = raffle - window.getHeight(),
             	formBodyInner = formBody.getFirst(),
             	_width = formBodyInner.getStyle('width'),
@@ -60,7 +65,7 @@
                 $body = document.body,
                 stickyClass = 'stickySave',
             	scrollSizeToInt = $this.getScroll().y.toInt();
-            	
+
             if(scrollSizeToInt > diff) {
                 $body.removeClass(stickyClass);
             } else {
@@ -69,6 +74,31 @@
                     formBodyInner.setStyle('width', _width);
                     $body.addClass(stickyClass);
                 }
+            }
+        },
+
+        generateOffset: function(formBody){
+
+            //set news offset for debugbar
+            if($('debug')){
+                var offset = $('debug').getFirst('p').getSize().y + $('debug').getFirst('div').getSize().y ;
+                    formBody.getFirst().setStyle('bottom',offset);
+            }
+            else{
+                var offset = 0;
+            }
+            return offset;
+        },
+
+        setToggler: function(formBody){
+
+            var self = this;
+            //react on debug toggle
+            if($('tog'))
+            {
+                $('tog').addEvent('click',function(){
+                    self.setItem(formBody);
+                })
             }
         }
     }
