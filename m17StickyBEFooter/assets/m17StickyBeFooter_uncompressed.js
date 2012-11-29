@@ -48,7 +48,7 @@
                 });
 
                 //set toggle action
-                this.setToggler(setToggler);
+                this.setToggler(formBody);
             }
         },
         /* initStickyFooter
