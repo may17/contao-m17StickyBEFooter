@@ -83,8 +83,11 @@
             if($('debug')){
                 var offset = $('debug').getFirst('p').getSize().y + $('debug').getFirst('div').getSize().y ;
                     formBody.getFirst().setStyle('bottom',offset);
-                return offset;
             }
+            else{
+                var offset = 0;
+            }
+            return offset;
         },
 
         setToggler: function(formBody){
