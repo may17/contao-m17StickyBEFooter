@@ -93,7 +93,6 @@
          */
         setStickyPosition: function(formbody) {
             this.footerData.submitContainer.setStyle('left', formbody.getPosition().x);
-            console.log('action');
         },
         
         /* setItem
