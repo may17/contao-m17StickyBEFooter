@@ -53,6 +53,9 @@
                     	self.setItem();
                 	})
                 }
+                
+                // set Position on Init
+                setEvent();
             }
         },
         
@@ -123,7 +126,6 @@
 
     window.addEvent('domready', function() {
         M17StickyFooter.init();
-        this.scrollTo(0, 1);
     });
 
 })();
