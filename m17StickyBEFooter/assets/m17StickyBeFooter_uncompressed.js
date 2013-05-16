@@ -1,11 +1,9 @@
-/* Stcky Footer for Contao
- * @author: Joe Ray Gregory aka may17
- * @author: Stefan Melz (Debugbar bugfix)
- * @copyright: Joe Ray Gregory 2012 joe@may17.de
- * @license LGPL
- */
 (function() {
     M17StickyFooter = {
+
+        /**
+         * constructor
+         */
         init: function() {
 
             var formBody = document.getElement('.tl_formbody_submit') || false,
@@ -57,19 +55,26 @@
                 // set Position on Init
                 setEvent();
             }
+
+            // easy themes fix
+            if(document.id('easy_themes').getStyle('position') == 'absolute') {
+                document.id('easy_themes').setStyle('position', 'static');
+            }
         },
         
         /* generateSubmitObj
          * @desc generates the internal footer Object
          */
         generateSubmitObj: function(formbody) {
-        	var submitContainer = formbody.getFirst();
-        	
+        	var submitContainer = formbody.getFirst(),
+                // Fixes Mootools Bug see https://github.com/mootools/mootools-core/issues/2364
+                submitContainerWidth =  (!Browser.opera)  ? submitContainer.getStyle('width') : window.getComputedStyle(submitContainer,"").getPropertyValue("width");
+
         	return {
         		item: formbody,
         		submitContainer: submitContainer,
         		height: submitContainer.getHeight(),
-        		width: submitContainer.getStyle('width'),
+        		width: submitContainerWidth,
         		offset: 0,
         		position: submitContainer.getCoordinates()
         	}
@@ -116,7 +121,6 @@
                 //check if class set
                 if(!docBody.hasClass(stickyClass)) {
                     this.footerData.submitContainer.setStyle('width', this.footerData.width);
-
                     docBody.addClass(stickyClass);
                     
                 }

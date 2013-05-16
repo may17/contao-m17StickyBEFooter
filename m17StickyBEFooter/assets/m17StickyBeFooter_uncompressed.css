@@ -13,3 +13,8 @@
 .stickySave #tl_helpBox{
 	margin-left:30px;
 }
+
+/* fixes easy themes bug */
+#easy_themes {
+    position: absolute;
+}
