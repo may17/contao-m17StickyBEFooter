@@ -16,5 +16,5 @@
 
 /* fixes easy themes bug */
 #easy_themes {
-    position: absolute;
+    display: none;
 }

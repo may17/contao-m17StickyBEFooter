@@ -1,5 +1,11 @@
+/* Stcky Footer for Contao
+ * @author: Joe Ray Gregory aka may17
+ * @author: Stefan Melz (Debugbar bugfix)
+ * @copyright: Joe Ray Gregory 2012 - 2013 joe@may17.de
+ * @license LGPL
+ */
 (function() {
-    M17StickyFooter = {
+    var M17StickyFooter = {
 
         /**
          * constructor
@@ -10,6 +16,7 @@
                 setEvent,
                 fieldsets,
                 debugToggler,
+                easyTheme = document.id('easy_themes') || false,
                 self = this;
 
             //invoke only when the element existists
@@ -57,8 +64,10 @@
             }
 
             // easy themes fix
-            if(document.id('easy_themes').getStyle('position') == 'absolute') {
-                document.id('easy_themes').setStyle('position', 'static');
+            if(easyTheme) {
+                if(easyTheme.getStyle('display') == 'none') {
+                    easyTheme.setStyle('display', 'block');
+                }
             }
         },
         
@@ -68,7 +77,7 @@
         generateSubmitObj: function(formbody) {
         	var submitContainer = formbody.getFirst(),
                 // Fixes Mootools Bug see https://github.com/mootools/mootools-core/issues/2364
-                submitContainerWidth =  (!Browser.opera)  ? submitContainer.getStyle('width') : window.getComputedStyle(submitContainer,"").getPropertyValue("width");
+                submitContainerWidth =  (!Browser.opera) ? submitContainer.getStyle('width') : window.getComputedStyle(submitContainer,"").getPropertyValue("width");
 
         	return {
         		item: formbody,
