@@ -64,7 +64,7 @@
             }
 
             // easy themes fix
-            if(easyTheme) {
+            if(easyTheme && !document.getElement('body').hasClass('popup')) {
                 if(easyTheme.getStyle('display') == 'none') {
                     easyTheme.setStyle('display', 'block');
                 }
