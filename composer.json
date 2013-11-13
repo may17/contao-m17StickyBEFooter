@@ -1,0 +1,38 @@
+{
+    "name":"jrgregory/dlstats",
+    "description":"The sticky backend footer helps you to speedup your workflow in the backend",
+    "keywords":["sticky","footer","backend","workflow"],
+    "type":"contao-module",
+    "homepage":"http://www.slash-works.de",
+    "license":"LGPL-3.0+",
+    "authors":[
+        {
+            "name":"Joe Ray Gregory",
+            "homepage":"http://www.slash-works.de",
+            "role":"Developer"
+        }
+    ],
+    "support":{
+        "issues":"https://github.com/may17/contao-m17StickyBEFooter/issues",
+        "irc":"irc://irc.freenode.org/contao.dev",
+        "source":"https://github.com/may17/contao-m17StickyBEFooter/"
+    },
+    "require":{
+        "php":">=5.3",
+        "contao/core":">=2.9,<4",
+        "contao-community-alliance/composer-installer":"*"
+    },
+    "autoload":{
+        "classmap":["m17StickyBEFooter/"]
+    },
+    "replace":{
+        "contao-legacy/m17-sticky-backend-footer":"*"
+    },
+    "extra":{
+        "contao":{
+            "sources":{
+                "m17StickyBEFooter":"system/modules/m17StickyBEFooter"
+            }
+        }
+    }
+}
