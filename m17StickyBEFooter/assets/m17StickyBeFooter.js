@@ -1,4 +1,4 @@
-/* Stcky Footer for Contao
+/* Sticky Footer for Contao
  * @author: Joe Ray Gregory aka may17
  * @copyright: Joe Ray Gregory 2012 - 2013 joe@may17.de
  * @license LGPL
