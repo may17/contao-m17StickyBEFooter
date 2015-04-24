@@ -94,7 +94,7 @@
          */
         generateOffset: function(){
 			var debug = document.getElement('div#debug') || false;
-			var debug = (debug==false) ? document.getElement('div#contao-debug') : debug;
+			    debug = (debug==false) ? document.getElement('div#contao-debug') : debug;
 			
 			
             //set news offset for debugbar
