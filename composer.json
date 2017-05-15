@@ -19,7 +19,7 @@
     },
     "require":{
         "php":">=5.3",
-        "contao/core":">=2.9,<4",
+        "contao/core-bundle":">=2.9 || ~4.3",
         "contao-community-alliance/composer-installer":"*"
     },
     "autoload":{
