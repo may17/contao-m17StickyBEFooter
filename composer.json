@@ -20,7 +20,7 @@
     "require":{
         "php":">=5.3",
         "contao/core-bundle":">=2.9 || ~4.3",
-        "contao-community-alliance/composer-plugin":"~2.4 || ~3.0",
+        "contao-community-alliance/composer-plugin":"~2.4 || ~3.0"
     },
     "autoload":{
         "classmap":["m17StickyBEFooter/"]
