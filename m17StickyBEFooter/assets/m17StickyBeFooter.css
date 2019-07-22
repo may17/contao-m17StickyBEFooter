@@ -2,7 +2,7 @@
 	position:fixed;
 	bottom:0;
 	z-index:99;
-	left: auto;
+    left: auto;
 }
 
 .stickySave #main{
