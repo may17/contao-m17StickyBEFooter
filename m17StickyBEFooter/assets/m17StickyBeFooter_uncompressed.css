@@ -1,5 +1,5 @@
 .stickySave .tl_submit_container {
-	position:fixed;
+	position:sticky;
 	bottom:0;
 	z-index:99;
 	left: auto;

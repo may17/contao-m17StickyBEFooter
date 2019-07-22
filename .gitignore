@@ -1,4 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
+node_modules
+.cache
+
 ### OSX template
 .DS_Store
 .AppleDouble

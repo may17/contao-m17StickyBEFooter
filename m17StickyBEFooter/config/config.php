@@ -31,5 +31,5 @@
 if(TL_MODE == 'BE')
 {
     $GLOBALS['TL_CSS'][] = 'system/modules/m17StickyBEFooter/assets/m17StickyBeFooter.css';
-    $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/m17StickyBEFooter/assets/m17StickyBeFooter.js';
+    $GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/m17StickyBEFooter/assets/dist/main.js';
 }
