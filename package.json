@@ -4,8 +4,8 @@
   "description": "This is a tiny contao backend extension that sticks the save area to the bottom of the browser as long as the orginal region isn\\`t reached. You don`t have to scroll down to do a quick save.",
   "main": "index.js",
   "scripts": {
-    "watch": "parcel watch m17StickyBEFooter/assets/src/main.js -d m17StickyBEFooter/assets/dist --no-hmr",
-    "build": "parcel build m17StickyBEFooter/assets/src/main.js -d m17StickyBEFooter/assets/dist"
+    "watch": "parcel watch m17StickyBEFooter/assets/src/* -d m17StickyBEFooter/assets/dist --no-hmr",
+    "build": "parcel build m17StickyBEFooter/assets/src/* -d m17StickyBEFooter/assets/dist"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,7 @@
   "dependencies": {
     "parcel-bundler": "^1.12.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "sass": "^1.22.7"
+  }
 }

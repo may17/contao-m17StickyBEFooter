@@ -1,5 +1,7 @@
-[*.js]
+[*.{js,css,scss}]
 end_of_line = lf
-insert_final_newline = true
 indent_style = space
 indent_size = 2
+
+[*.js]
+insert_final_newline = true

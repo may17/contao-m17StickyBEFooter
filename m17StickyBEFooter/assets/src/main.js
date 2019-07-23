@@ -1,8 +1,5 @@
-const add = (a, b) => a + b
-const subtract = (a, b) => a - b
-const _pipe = (f, g) => (...args) => g(f(...args))
-const flow = (...fns) => fns.reduce(_pipe)
-const partial = (fn, firstArg) => {  return (...lastArgs) => {    return fn(firstArg, ...lastArgs);  }}
+
+import { add, subtract, pipe, partial } from './utils/fph'
 
 /**
  * Short hand for native querySelector
@@ -46,7 +43,7 @@ const setWidth = (container, width) => {
  *
  * @param {*} itemStyle
  */
-const getPlainValue = itemStyle => flow(
+const getPlainValue = itemStyle => pipe(
   itemStyle,
   parseInt
 )
