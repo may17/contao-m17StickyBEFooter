@@ -140,7 +140,7 @@ const init = () => {
   const docBody = document.body
 
   const observer = new window.IntersectionObserver(entries => observeHandler(entries, docBody, submitContainer, submitForm))
-  observer.observe(submitForm, 500)
+  observer.observe(submitForm)
 
   autoFixContainerWidth(submitContainer, submitForm)
 }
